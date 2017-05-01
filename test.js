@@ -1,1 +1,1 @@
-import './done-element-test';
+require("can-element/test/test");
