@@ -1,0 +1,22 @@
+<!doctype html>
+
+<title>done-element demo</title>
+
+<hello-world></hello-world>
+
+<script src="./node_modules/steal/steal.js"></script>
+<script type="text/steal-module">
+	import withElement from "done-element";
+	import stache from "can-stache";
+
+	var CanElement = withElement.Element;
+	var view = stache("Hello world!");
+
+	class HelloWorld extends CanElement {
+		static get view() {
+			return view;
+		}
+	}
+
+	customElements.define("hello-world", HelloWorld);
+</script>

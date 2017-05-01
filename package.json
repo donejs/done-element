@@ -1,0 +1,68 @@
+{
+  "name": "done-element",
+  "version": "0.0.0",
+  "description": "Custom elements for DoneJS projects",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/donejs/done-element.git"
+  },
+  "author": {
+    "name": "DoneJS Contributors",
+    "email": "contact@donejs.com",
+    "url": "https://donejs.com/"
+  },
+  "scripts": {
+    "preversion": "npm test && npm run build",
+    "version": "git commit -am \"Update version number\" && git checkout -b release && git add -f dist/",
+    "postpublish": "git push --tags && git checkout master && git branch -D release && git push",
+    "testee": "testee test.html --browsers firefox",
+    "test": "npm run jshint && npm run testee",
+    "jshint": "jshint ./*.js --config",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish",
+    "build": "node build.js",
+    "develop": "done-serve --static --develop --port 8080"
+  },
+  "main": "done-element.js",
+  "browser": {
+    "transform": [
+      "cssify"
+    ]
+  },
+  "browserify": {
+    "transform": [
+      "cssify"
+    ]
+  },
+  "keywords": [
+    "Donejs",
+    "custom",
+    "elements",
+    "donejs-plugin"
+  ],
+  "steal": {
+    "configDependencies": [
+      "./node_modules/steal-conditional/conditional.js"
+    ]
+  },
+  "dependencies": {
+    "@webcomponents/custom-elements": "webcomponents/custom-elements#v1.0.0-alpha.4",
+    "can-element": "^0.2.0",
+    "cloudydom": "^1.0.1"
+  },
+  "devDependencies": {
+    "can-stache": "^3.0.24",
+    "done-serve": "^1.0.0",
+    "donejs-cli": "^1.0.0",
+    "generator-donejs": "^1.0.0",
+    "jshint": "^2.9.1",
+    "steal": "^1.3.1",
+    "steal-conditional": "^0.3.3",
+    "steal-qunit": "^1.0.1",
+    "steal-tools": "^1.2.0",
+    "testee": "^0.3.0"
+  },
+  "license": "MIT"
+}
