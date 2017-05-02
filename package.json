@@ -52,7 +52,9 @@
     "cloudydom": "^1.0.1"
   },
   "devDependencies": {
+    "can-define": "^1.0.24",
     "can-stache": "^3.0.24",
+    "can-stache-bindings": "^3.0.19",
     "done-serve": "^1.0.0",
     "donejs-cli": "^1.0.0",
     "generator-donejs": "^1.0.0",
