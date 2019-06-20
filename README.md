@@ -1,6 +1,6 @@
 # done-element
 
-[![Build Status](https://travis-ci.org/donejs/done-element.png?branch=master)](https://travis-ci.org/donejs/done-element)
+[![Build Status](https://travis-ci.org/donejs/done-element.png?branch=master)](https://travis-ci.org/donejs/done-element) [![Greenkeeper badge](https://badges.greenkeeper.io/donejs/done-element.svg)](https://greenkeeper.io/)
 
 Custom elements for DoneJS projects. This works exactly the same as [can-element](https://github.com/canjs/can-element), but also loads polyfills if needed.
 
